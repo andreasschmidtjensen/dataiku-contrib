@@ -95,7 +95,7 @@ def send_email(contact):
     msg["Subject"]=  email_subject
 
     # Leave some space for proper displaying of the attachment
-    msg.attach(MIMEText(email_text + "\n\n"))
+    msg.attach(MIMEText(email_text + "\n\n", "plain", "utf-8"))
     for a in mime_parts:
         msg.attach(a)
 
